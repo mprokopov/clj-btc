@@ -397,6 +397,10 @@
   require the wallet to be unlocked."
   [])
 
+(defrpc getwalletinfo
+  "gets wallet information"
+  [])
+
 (defrpc walletpassphrase
   "Stores the wallet decryption key in memory for <timeout> seconds."
   [passphrase timeout]

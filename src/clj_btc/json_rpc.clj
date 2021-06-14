@@ -42,7 +42,7 @@
    Might throw an exception in case of a non-bitcoin error
    (i.e a connection is refused)."
   [config method params]
-  (let [logger (:logger config)
+  (let [logger  constantly #_(:logger config)
         log (fn [msg] (when (fn? logger) (logger msg)))
         host (:rpchost config)
         resp
