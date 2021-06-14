@@ -154,7 +154,7 @@
    difficulty."
   [])
 
-(defrpc getgenerate
+(defrpc ^:deprecated getgenerate
   "Returns true or false whether bitcoind is currently generating hashes"
   [])
 
@@ -333,7 +333,7 @@
   {:pre [(string? bitcoinaddress)
          (number? amount)]})
 
-(defrpc setaccount
+(defrpc ^:deprecated setaccount
   "Sets the account associated with the given address. Assigning
   address that is already assigned to the same account will create a new
   address associated with that account."
@@ -399,6 +399,10 @@
 
 (defrpc getwalletinfo
   "gets wallet information"
+  [])
+
+(defrpc listwallets
+  "lists wallets information"
   [])
 
 (defrpc walletpassphrase
